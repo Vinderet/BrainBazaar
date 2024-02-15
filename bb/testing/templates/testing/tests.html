@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Тесты{% endblock %}
+
+{% block content %}
+    <h1>Тесты</h1>
+    {% for test in tests %}
+        <h2>{{ test.name }}</h2>
+        <p>{{ test.desc }}</p>
+        <a href="{% url 'test' test.id %}">Пройти тест</a>
+    {% endfor %}
+{% endblock %}

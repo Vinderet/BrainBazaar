@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Результаты{% endblock %}
+
+{% block content %}
+    <h1>Результаты</h1>
+    <p>Имя теста: {{test.name}}</p>
+    <p>Описание теста: {{test.desc}}</p>
+    <p>Вы ответили правильно на {{ correct_answers }} из {{ total_questions }} вопросов.</p>
+    <p>Процент правильных ответов: {{percentage}}%</p>
+    <a href="{% url 'test_list' %}">Вернуться к списку тестов</a>
+{% endblock %}
